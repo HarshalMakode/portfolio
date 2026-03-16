@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import './App.css'
+import { useEffect, useState } from "react";
+import Loader from "./components/Loader";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+
+  if (loading) return <Loader />;
 
   return (
-    <>
-      <h1 className="text-5xl font-bold text-purple-500">
-        Hello Harshal 🚀 Tailwind Working
-      </h1>
-    </>
-  )
+    <div className="bg-red-500 text-white p-10">
+      Hello World
+    </div>
+  );
 }
 
-export default App
+export default App;
