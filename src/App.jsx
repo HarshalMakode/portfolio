@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 import Nav from "./components/Nav";
+import Home from "./components/Home";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -14,21 +15,12 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    if (loading) {
-      document.body.style.overflow = "hidden";
-      document.body.style.cursor = "none";   
-    } else {
-      document.body.style.overflow = "auto";
-      document.body.style.cursor = "auto"; 
-    }
-  }, [loading]);
-
   if (loading) return <Loader />;
 
   return (
     <>
       <Nav />
+      <Home />
     </>
   );
 }

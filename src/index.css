@@ -46,7 +46,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: black;
   z-index: 9999;
 
   /* 🔥 disable everything */
@@ -60,3 +59,207 @@ body {
   touch-action: none;
 }
 
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--dark-blue);
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(61, 125, 202, 0.3) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(227, 53, 13, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 80%, rgba(255, 203, 5, 0.15) 0%, transparent 50%);
+}
+
+/* Pixel grid overlay */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.floating-pokemon {
+  position: absolute;
+  font-size: 4rem;
+  opacity: 0.12;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+  user-select: none;
+}
+
+.fp1 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+  font-size: 3rem;
+}
+
+.fp2 {
+  top: 20%;
+  right: 8%;
+  animation-delay: 1s;
+  font-size: 5rem;
+}
+
+.fp3 {
+  bottom: 20%;
+  left: 10%;
+  animation-delay: 2s;
+  font-size: 4rem;
+}
+
+.fp4 {
+  bottom: 10%;
+  right: 15%;
+  animation-delay: 0.5s;
+  font-size: 3.5rem;
+}
+
+.fp5 {
+  top: 50%;
+  left: 2%;
+  animation-delay: 3s;
+  font-size: 2.5rem;
+}
+
+.fp6 {
+  top: 40%;
+  right: 3%;
+  animation-delay: 1.5s;
+  font-size: 4.5rem;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+  padding: 2rem;
+  animation: fadeInUp 1s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--yellow);
+  color: #111;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border: 2px solid #111;
+  box-shadow: 3px 3px 0 #111;
+  animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-name {
+  font-family: 'Press Start 2P', monospace;
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
+  color: var(--yellow);
+  text-shadow: 4px 4px 0 #E3350D, 8px 8px 0 #111;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease 0.3s both;
+}
+
+.hero-title {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease 0.4s both;
+}
+
+.hero-title span {
+  color: var(--yellow);
+}
+
+.hero-desc {
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+  animation: fadeInUp 1s ease 0.5s both;
+}
+
+.hero-cta {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeInUp 1s ease 0.6s both;
+}
+
+.btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.55rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  border: 3px solid #111;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.1s, box-shadow 0.1s;
+  display: inline-block;
+}
+
+.btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: none !important;
+}
+
+.btn-primary {
+  background: var(--red);
+  color: white;
+  box-shadow: 4px 4px 0 #111;
+}
+
+.btn-primary:hover {
+  box-shadow: 6px 6px 0 #111;
+  transform: translate(-2px, -2px);
+}
+
+.btn-secondary {
+  background: var(--yellow);
+  color: #111;
+  box-shadow: 4px 4px 0 #111;
+}
+
+.btn-secondary:hover {
+  box-shadow: 6px 6px 0 #111;
+  transform: translate(-2px, -2px);
+}
