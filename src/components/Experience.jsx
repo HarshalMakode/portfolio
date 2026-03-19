@@ -33,7 +33,7 @@ function Experience() {
   ];
 
   return (
-    <section className="px-8 py-24 max-w-[1100px] mx-auto">
+    <section id="edu" className="px-8 py-24 max-w-[1100px] mx-auto">
       {/* Title */}
       <h2 className="text-center font-pokemon text-yellow-400 text-lg mb-12">
         EVOLUTION PATH
