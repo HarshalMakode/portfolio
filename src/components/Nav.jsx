@@ -9,10 +9,10 @@ function Nav() {
 
       {/* Links */}
       <ul className="hidden md:flex gap-6 list-none text-[10px] font-[Press_Start_2P] text-white">
-        <li><a href="#about" className="hover:text-yellow-400">TRAINER</a></li>
-        <li><a href="#skills" className="hover:text-yellow-400">POKÉDEX</a></li>
-        <li><a href="#projects" className="hover:text-yellow-400">GYMS</a></li>
-        <li><a href="#exp" className="hover:text-yellow-400">EVOLUTION</a></li>
+        <li><a href="#home" className="hover:text-yellow-400">HOME</a></li>
+        <li><a href="#skills" className="hover:text-yellow-400">SKILL</a></li>
+        <li><a href="#projects" className="hover:text-yellow-400">PROJECT</a></li>
+        <li><a href="#edu" className="hover:text-yellow-400">EDUCATION</a></li>
         <li><a href="#contact" className="hover:text-yellow-400">BATTLE</a></li>
       </ul>
 

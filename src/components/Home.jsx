@@ -1,6 +1,6 @@
 function Home() {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <div className="hero-bg"></div>
 
       {/* SVG Floating */}
@@ -39,6 +39,7 @@ function Home() {
           />
         </svg>
       </span>
+
       <span className="floating-pokemon fp4">
         <svg viewBox="0 0 256 256" className="w-16 h-16">
           {/* Background */}
@@ -61,6 +62,7 @@ function Home() {
           />
         </svg>
       </span>
+
       <span className="floating-pokemon fp5">
         <svg viewBox="0 0 256 256" className="w-16 h-16">
           {/* Background */}
@@ -79,6 +81,7 @@ function Home() {
           />
         </svg>
       </span>
+      
       <span className="floating-pokemon fp6">
         <svg viewBox="0 0 256 256" className="w-16 h-16">
           {/* Background */}

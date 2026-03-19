@@ -3,6 +3,11 @@ import Loader from "./components/Loader";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
+import Project from "./components/Project";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,7 +27,11 @@ function App() {
     <>
       <Nav />
       <Home />
-      <Footer />
+      <Skills />
+      <Project />
+      <Experience />
+      <Contact />
+      <Footer />    
     </>
   );
 }
