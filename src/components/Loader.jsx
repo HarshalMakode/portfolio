@@ -2,8 +2,8 @@ import pikachu from "../assets/pikachu.gif";
 
 function Loader() {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <img src={pikachu} className="w-40" />
+    <div className="loader-screen">
+      <img src={pikachu} className="w-40" alt="loading" />
     </div>
   );
 }
